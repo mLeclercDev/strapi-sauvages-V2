@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_expertise_hero_section_singles",
+  "info": {
+    "displayName": "Hero section Single"
+  },
+  "options": {},
+  "attributes": {
+    "Titre": {
+      "type": "string",
+      "default": "conseil",
+      "required": true
+    },
+    "Description": {
+      "type": "text",
+      "default": "Une vision stratégique pour une prise de parole jamais en retard sur son temps.",
+      "required": true
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,54 @@
+{
+  "collectionName": "components_contact_hero_contacts",
+  "info": {
+    "displayName": "Hero contact"
+  },
+  "options": {},
+  "attributes": {
+    "Titre": {
+      "type": "string",
+      "default": "Contact",
+      "required": true
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "TexteBouton1": {
+      "type": "string",
+      "default": "réserver un appel",
+      "required": true
+    },
+    "IconBouton1": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "TexteBouton2": {
+      "type": "string",
+      "default": "comment on peut vous aider ?",
+      "required": true
+    },
+    "IconBouton2": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  },
+  "config": {}
+}

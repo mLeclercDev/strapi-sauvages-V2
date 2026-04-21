@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_manifeste_manifeste_hero_section_items",
+  "info": {
+    "displayName": "Manifeste Hero Section Item"
+  },
+  "options": {},
+  "attributes": {
+    "Titre": {
+      "type": "string",
+      "default": "On ne vend pas du rêve,  on crée de la pertinence",
+      "required": true
+    },
+    "Description": {
+      "type": "blocks",
+      "required": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_homepage_intros",
+  "info": {
+    "displayName": "Intro",
+    "icon": "quote"
+  },
+  "options": {},
+  "attributes": {
+    "Label": {
+      "type": "string",
+      "default": "L’agence"
+    },
+    "Texte": {
+      "type": "blocks"
+    },
+    "Bouton": {
+      "type": "component",
+      "component": "ui.bouton",
+      "repeatable": false
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

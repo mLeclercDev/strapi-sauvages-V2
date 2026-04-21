@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_global_expertise_items",
+  "info": {
+    "displayName": "Expertise Item"
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "default": "Conseil",
+      "required": true
+    },
+    "Description": {
+      "type": "blocks",
+      "required": true
+    },
+    "Listes": {
+      "type": "blocks",
+      "required": true
+    },
+    "PresenceBouton": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "Bouton": {
+      "type": "component",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "PresenceBouton"
+            },
+            true
+          ]
+        }
+      },
+      "component": "ui.bouton",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

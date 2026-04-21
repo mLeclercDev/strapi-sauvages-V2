@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_homepage_hero_sections",
+  "info": {
+    "displayName": "Hero section"
+  },
+  "options": {},
+  "attributes": {
+    "Titre": {
+      "type": "text",
+      "default": "Agence créative, unie pour créer de l’émotion depuis 20ans. De la stratégie à la création.",
+      "required": true
+    },
+    "Video": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    }
+  },
+  "config": {}
+}

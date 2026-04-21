@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_global_carousel_de_logos",
+  "info": {
+    "displayName": "Carousel de logo",
+    "icon": "arrowRight"
+  },
+  "options": {},
+  "attributes": {
+    "Label": {
+      "type": "string"
+    },
+    "Titre": {
+      "type": "component",
+      "component": "ui.titre",
+      "repeatable": false
+    },
+    "Logo": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

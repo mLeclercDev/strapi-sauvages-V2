@@ -1,0 +1,78 @@
+{
+  "collectionName": "components_contact_champ_de_formulaires",
+  "info": {
+    "displayName": "Champ de formulaire"
+  },
+  "options": {},
+  "attributes": {
+    "Obligatoire": {
+      "type": "boolean",
+      "required": false,
+      "default": false
+    },
+    "Type": {
+      "type": "enumeration",
+      "required": true,
+      "default": "texte",
+      "enum": [
+        "texte",
+        "mail",
+        "telephone",
+        "fichier",
+        "select"
+      ]
+    },
+    "Intitule": {
+      "type": "string",
+      "default": "Nom / Prénom",
+      "required": true
+    },
+    "TexteReponse": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "Type"
+            },
+            "texte"
+          ]
+        }
+      },
+      "default": "Pierre Dubois",
+      "required": true
+    },
+    "Email": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "Type"
+            },
+            "mail"
+          ]
+        }
+      },
+      "default": "pierre.dubois@gmail.com",
+      "required": true
+    },
+    "Option": {
+      "type": "component",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "Type"
+            },
+            "select"
+          ]
+        }
+      },
+      "component": "contact.option",
+      "repeatable": true,
+      "required": true
+    }
+  },
+  "config": {}
+}

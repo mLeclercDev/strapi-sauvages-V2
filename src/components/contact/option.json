@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_contact_options",
+  "info": {
+    "displayName": "Option"
+  },
+  "options": {},
+  "attributes": {
+    "Texte": {
+      "type": "string",
+      "default": "stratégie",
+      "required": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,45 @@
+{
+  "collectionName": "components_expertise_expertise_description_singles",
+  "info": {
+    "displayName": "Expertise description Single"
+  },
+  "options": {},
+  "attributes": {
+    "Titre": {
+      "type": "component",
+      "component": "ui.titre",
+      "repeatable": false
+    },
+    "Description": {
+      "type": "blocks",
+      "required": true
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "Titre2": {
+      "type": "string",
+      "default": "Lorem ipsum",
+      "required": true
+    },
+    "Texte": {
+      "type": "blocks",
+      "required": true
+    },
+    "Label": {
+      "type": "string",
+      "default": "Notre accompagnement stratégique",
+      "required": true
+    },
+    "Listes": {
+      "type": "blocks"
+    }
+  },
+  "config": {}
+}

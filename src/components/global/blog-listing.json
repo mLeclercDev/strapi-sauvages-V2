@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_global_blog_listings",
+  "info": {
+    "displayName": "Blog listing"
+  },
+  "options": {},
+  "attributes": {
+    "Titre": {
+      "type": "component",
+      "component": "ui.titre",
+      "repeatable": false
+    },
+    "Description": {
+      "type": "text"
+    },
+    "URL": {
+      "type": "string",
+      "required": true
+    },
+    "TexteDuLien": {
+      "type": "string",
+      "default": "Tout voir"
+    }
+  },
+  "config": {}
+}

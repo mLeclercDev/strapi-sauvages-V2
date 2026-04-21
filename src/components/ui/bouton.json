@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_ui_boutons",
+  "info": {
+    "displayName": "Bouton",
+    "icon": "arrowRight"
+  },
+  "options": {},
+  "attributes": {
+    "Texte": {
+      "type": "string"
+    },
+    "Icone": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Url": {
+      "type": "string"
+    },
+    "Blank": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "config": {}
+}

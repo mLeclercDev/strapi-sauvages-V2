@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_agence_equipe_listings",
+  "info": {
+    "displayName": "Equipe - Listing"
+  },
+  "options": {},
+  "attributes": {
+    "EquipeListingItem": {
+      "type": "component",
+      "component": "agence.equipe-listing-item",
+      "repeatable": true,
+      "required": true
+    }
+  },
+  "config": {}
+}

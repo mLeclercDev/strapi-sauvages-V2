@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "manifestes",
+  "info": {
+    "singularName": "manifeste",
+    "pluralName": "manifestes",
+    "displayName": "Manifeste"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Contenu": {
+      "type": "dynamiczone",
+      "components": [
+        "manifeste.missions",
+        "manifeste.hero-section"
+      ]
+    }
+  }
+}

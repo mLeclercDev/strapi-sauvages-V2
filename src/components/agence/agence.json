@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_agence_agences",
+  "info": {
+    "displayName": "Agence"
+  },
+  "options": {},
+  "attributes": {
+    "Titre": {
+      "type": "component",
+      "component": "ui.titre",
+      "repeatable": false
+    },
+    "Item": {
+      "type": "component",
+      "component": "agence.agence-description-item",
+      "repeatable": true
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  },
+  "config": {}
+}

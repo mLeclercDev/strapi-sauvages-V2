@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_agence_equipe_presentation_items",
+  "info": {
+    "displayName": "Equipe présentation - item"
+  },
+  "options": {},
+  "attributes": {
+    "Nom": {
+      "type": "string",
+      "default": "Un pôle Conseil",
+      "required": true
+    },
+    "Description": {
+      "type": "blocks",
+      "required": true
+    }
+  },
+  "config": {}
+}

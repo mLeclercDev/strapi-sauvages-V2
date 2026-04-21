@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "carousel_de_logos",
+  "info": {
+    "singularName": "carousel-de-logo",
+    "pluralName": "carousel-de-logos",
+    "displayName": "Carousel de logo"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Label": {
+      "type": "string",
+      "default": "Nos clients"
+    },
+    "Titre": {
+      "type": "component",
+      "component": "ui.titre",
+      "repeatable": false,
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_agence_equipe_listing_items",
+  "info": {
+    "displayName": "Equipe Listing Item"
+  },
+  "options": {},
+  "attributes": {
+    "Nom": {
+      "type": "string",
+      "default": "Charlotte",
+      "required": true
+    },
+    "Description": {
+      "type": "string",
+      "default": "Signature ou baseline"
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "Media": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

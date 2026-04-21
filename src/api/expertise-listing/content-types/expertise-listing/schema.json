@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "expertise_listings",
+  "info": {
+    "singularName": "expertise-listing",
+    "pluralName": "expertise-listings",
+    "displayName": "Expertise listing"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Contenu": {
+      "type": "dynamiczone",
+      "components": [
+        "expertise.hero-section",
+        "global.expertises-listing"
+      ]
+    }
+  }
+}

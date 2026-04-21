@@ -1,0 +1,33 @@
+{
+  "kind": "singleType",
+  "collectionName": "blog_sections",
+  "info": {
+    "singularName": "blog-section",
+    "pluralName": "blog-sections",
+    "displayName": "Blog section"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titre": {
+      "type": "component",
+      "component": "ui.titre",
+      "repeatable": false
+    },
+    "Description": {
+      "type": "string",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+    },
+    "TexteDuLien": {
+      "type": "string",
+      "default": "Tout voir",
+      "required": true
+    },
+    "URL": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_expertise_ancres_items",
+  "info": {
+    "displayName": "Ancres item"
+  },
+  "options": {},
+  "attributes": {
+    "Texte": {
+      "type": "string"
+    },
+    "Ancre": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "expertises",
+  "info": {
+    "singularName": "expertise",
+    "pluralName": "expertises",
+    "displayName": "Expertise"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Contenu": {
+      "type": "dynamiczone",
+      "components": [
+        "expertise.expertise-description-single",
+        "expertise.hero-section-single"
+      ]
+    },
+    "projets": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::projet.projet",
+      "inversedBy": "expertise"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_global_expertises_listings",
+  "info": {
+    "displayName": "Expertises listing"
+  },
+  "options": {},
+  "attributes": {
+    "Titre": {
+      "type": "component",
+      "component": "ui.titre",
+      "repeatable": false
+    },
+    "Bouton": {
+      "type": "component",
+      "component": "ui.bouton",
+      "repeatable": false
+    },
+    "Item": {
+      "type": "component",
+      "component": "global.expertise-item",
+      "repeatable": true,
+      "required": true
+    }
+  },
+  "config": {}
+}

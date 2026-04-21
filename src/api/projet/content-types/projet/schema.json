@@ -1,0 +1,91 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projets",
+  "info": {
+    "singularName": "projet",
+    "pluralName": "projets",
+    "displayName": "Projet",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "sector": {
+      "type": "string"
+    },
+    "year": {
+      "type": "integer"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "color_section": {
+      "displayName": "color_section",
+      "type": "component",
+      "repeatable": false,
+      "component": "projet.color-section"
+    },
+    "sections": {
+      "displayName": "sections",
+      "type": "component",
+      "repeatable": true,
+      "component": "projet.sections"
+    },
+    "chiffres_section": {
+      "displayName": "chiffres_section",
+      "type": "component",
+      "repeatable": false,
+      "component": "projet.chiffres-section"
+    },
+    "services": {
+      "displayName": "services",
+      "type": "component",
+      "repeatable": true,
+      "component": "projet.services"
+    },
+    "client": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::client.client"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "SEO": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "expertise": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::expertise.expertise",
+      "mappedBy": "projets"
+    },
+    "autreProjet": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::projet.projet"
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "rank": {
+      "type": "integer"
+    }
+  }
+}

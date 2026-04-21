@@ -1,0 +1,50 @@
+{
+  "kind": "singleType",
+  "collectionName": "footers",
+  "info": {
+    "singularName": "footer",
+    "pluralName": "footers",
+    "displayName": "Footer"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Label": {
+      "type": "string",
+      "default": "contact"
+    },
+    "Titre": {
+      "type": "component",
+      "component": "ui.titre",
+      "repeatable": false,
+      "required": true
+    },
+    "Bouton": {
+      "type": "component",
+      "component": "ui.bouton",
+      "repeatable": false
+    },
+    "Label2": {
+      "type": "string",
+      "default": "L’agence",
+      "required": true
+    },
+    "Adresse": {
+      "type": "string",
+      "default": "2 rue de la Mabilais 35000 Rennes",
+      "required": true
+    },
+    "Item": {
+      "type": "component",
+      "component": "footer.footer-navigation-item",
+      "repeatable": true
+    },
+    "Lien": {
+      "type": "component",
+      "component": "footer.footer-navigation-2",
+      "repeatable": true
+    }
+  }
+}

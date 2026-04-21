@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_ui_titres",
+  "info": {
+    "displayName": "Titre"
+  },
+  "options": {},
+  "attributes": {
+    "Texte": {
+      "type": "string",
+      "default": "Votre titre",
+      "required": true
+    },
+    "HN": {
+      "type": "enumeration",
+      "enum": [
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6"
+      ]
+    },
+    "Logos": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  },
+  "config": {}
+}

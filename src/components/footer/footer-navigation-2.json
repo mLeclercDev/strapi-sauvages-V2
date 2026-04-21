@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_footer_footer_navigation_2s",
+  "info": {
+    "displayName": "Footer navigation 2"
+  },
+  "options": {},
+  "attributes": {
+    "Texte": {
+      "type": "string"
+    },
+    "URL": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

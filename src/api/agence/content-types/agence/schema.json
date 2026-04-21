@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "agences",
+  "info": {
+    "singularName": "agence",
+    "pluralName": "agences",
+    "displayName": "Agence"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Contenu": {
+      "type": "dynamiczone",
+      "components": [
+        "agence.hero-section",
+        "agence.agence",
+        "global.intro-image",
+        "agence.equipe-presentation",
+        "agence.equipe-listing",
+        "agence.histoire",
+        "global.blog-listing"
+      ]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_banner_infinites",
+  "info": {
+    "displayName": "infinite_banner",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "projets": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::projet.projet"
+    }
+  }
+}

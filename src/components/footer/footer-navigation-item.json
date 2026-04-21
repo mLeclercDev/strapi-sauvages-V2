@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_footer_footer_navigation_items",
+  "info": {
+    "displayName": "Footer Navigation Item"
+  },
+  "options": {},
+  "attributes": {
+    "Label": {
+      "type": "string",
+      "default": "Connecter",
+      "required": true
+    },
+    "Item": {
+      "type": "component",
+      "component": "footer.liens",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

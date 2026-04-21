@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_manifeste_missions",
+  "info": {
+    "displayName": "Missions"
+  },
+  "options": {},
+  "attributes": {
+    "Label": {
+      "type": "string",
+      "default": "entreprise à mission"
+    },
+    "Texte": {
+      "type": "blocks",
+      "required": true
+    },
+    "Item": {
+      "type": "component",
+      "component": "manifeste.missions-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

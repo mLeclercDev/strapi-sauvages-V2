@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_projets_hero_sections",
+  "info": {
+    "displayName": "Hero section"
+  },
+  "options": {},
+  "attributes": {
+    "Titre": {
+      "type": "string",
+      "default": "PROJETS",
+      "required": true
+    },
+    "Image": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  },
+  "config": {}
+}

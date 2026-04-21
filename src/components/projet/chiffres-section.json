@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_projet_chiffres_sections",
+  "info": {
+    "displayName": "chiffres_section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "Chiffres": {
+      "displayName": "Chiffres",
+      "type": "component",
+      "repeatable": true,
+      "component": "projet.chiffres"
+    },
+    "Color": {
+      "type": "enumeration",
+      "enum": [
+        "red",
+        "blue",
+        "orange",
+        "green",
+        "violet",
+        "yellow",
+        "rose",
+        "lightblue"
+      ]
+    }
+  }
+}

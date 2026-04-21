@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_projet_services",
+  "info": {
+    "displayName": "services"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_agence_agence_description_items",
+  "info": {
+    "displayName": "Agence description item"
+  },
+  "options": {},
+  "attributes": {
+    "Titre": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "blocks"
+    }
+  },
+  "config": {}
+}

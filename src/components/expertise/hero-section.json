@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_expertise_hero_sections",
+  "info": {
+    "displayName": "Hero section"
+  },
+  "options": {},
+  "attributes": {
+    "Titre": {
+      "type": "string",
+      "default": "expertises",
+      "required": true
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "Description": {
+      "type": "string",
+      "default": "créative, unie pour créer de l’émotion depuis 20 ans. De la stratégie à la création.",
+      "required": true
+    },
+    "Item": {
+      "type": "component",
+      "component": "expertise.ancres-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
