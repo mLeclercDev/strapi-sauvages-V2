@@ -117,6 +117,28 @@ export interface AgenceHistoire extends Struct.ComponentSchema {
   };
 }
 
+export interface AgenceIdentite extends Struct.ComponentSchema {
+  collectionName: 'components_agence_identites';
+  info: {
+    displayName: 'Identite';
+  };
+  attributes: {
+    Item: Schema.Attribute.Component<'agence.identite-item', true>;
+    Texte: Schema.Attribute.Blocks & Schema.Attribute.Required;
+  };
+}
+
+export interface AgenceIdentiteItem extends Struct.ComponentSchema {
+  collectionName: 'components_agence_identite_items';
+  info: {
+    displayName: 'Identite item';
+  };
+  attributes: {
+    Label: Schema.Attribute.String & Schema.Attribute.Required;
+    Texte: Schema.Attribute.Blocks & Schema.Attribute.Required;
+  };
+}
+
 export interface ContactChampDeFormulaire extends Struct.ComponentSchema {
   collectionName: 'components_contact_champ_de_formulaires';
   info: {
@@ -657,6 +679,8 @@ declare module '@strapi/strapi' {
       'agence.equipe-presentation-item': AgenceEquipePresentationItem;
       'agence.hero-section': AgenceHeroSection;
       'agence.histoire': AgenceHistoire;
+      'agence.identite': AgenceIdentite;
+      'agence.identite-item': AgenceIdentiteItem;
       'contact.champ-de-formulaire': ContactChampDeFormulaire;
       'contact.formulaire': ContactFormulaire;
       'contact.hero-contact': ContactHeroContact;

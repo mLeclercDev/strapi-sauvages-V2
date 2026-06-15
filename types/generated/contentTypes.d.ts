@@ -445,11 +445,13 @@ export interface ApiAgenceAgence extends Struct.SingleTypeSchema {
       [
         'agence.hero-section',
         'agence.agence',
+        'agence.identite',
         'global.intro-image',
         'agence.equipe-presentation',
         'agence.equipe-listing',
         'agence.histoire',
         'global.blog-listing',
+        'agence.identite-item',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;

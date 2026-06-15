@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_agence_identite_items",
+  "info": {
+    "displayName": "Identite item"
+  },
+  "options": {},
+  "attributes": {
+    "Label": {
+      "type": "string",
+      "required": true
+    },
+    "Texte": {
+      "type": "blocks",
+      "required": true
+    }
+  },
+  "config": {}
+}

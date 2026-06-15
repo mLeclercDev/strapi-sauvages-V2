@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_agence_identites",
+  "info": {
+    "displayName": "Identite"
+  },
+  "options": {},
+  "attributes": {
+    "Texte": {
+      "type": "blocks",
+      "required": true
+    },
+    "Item": {
+      "type": "component",
+      "component": "agence.identite-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
