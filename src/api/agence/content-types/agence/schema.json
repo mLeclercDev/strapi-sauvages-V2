@@ -22,7 +22,8 @@
         "agence.equipe-listing",
         "agence.histoire",
         "global.blog-listing",
-        "agence.identite-item"
+        "agence.identite-item",
+        "agence.cta"
       ]
     }
   }

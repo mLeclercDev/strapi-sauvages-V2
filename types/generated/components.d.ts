@@ -24,6 +24,17 @@ export interface AgenceAgenceDescriptionItem extends Struct.ComponentSchema {
   };
 }
 
+export interface AgenceCta extends Struct.ComponentSchema {
+  collectionName: 'components_agence_ctas';
+  info: {
+    displayName: 'Cta';
+  };
+  attributes: {
+    Bouton: Schema.Attribute.Component<'ui.bouton', false>;
+    Texte: Schema.Attribute.Blocks & Schema.Attribute.Required;
+  };
+}
+
 export interface AgenceEquipeListing extends Struct.ComponentSchema {
   collectionName: 'components_agence_equipe_listings';
   info: {
@@ -673,6 +684,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'agence.agence': AgenceAgence;
       'agence.agence-description-item': AgenceAgenceDescriptionItem;
+      'agence.cta': AgenceCta;
       'agence.equipe-listing': AgenceEquipeListing;
       'agence.equipe-listing-item': AgenceEquipeListingItem;
       'agence.equipe-presentation': AgenceEquipePresentation;

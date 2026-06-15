@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_agence_ctas",
+  "info": {
+    "displayName": "Cta"
+  },
+  "options": {},
+  "attributes": {
+    "Texte": {
+      "type": "blocks",
+      "required": true
+    },
+    "Bouton": {
+      "type": "component",
+      "component": "ui.bouton",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

@@ -452,6 +452,7 @@ export interface ApiAgenceAgence extends Struct.SingleTypeSchema {
         'agence.histoire',
         'global.blog-listing',
         'agence.identite-item',
+        'agence.cta',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
