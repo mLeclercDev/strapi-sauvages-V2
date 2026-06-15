@@ -78,8 +78,6 @@ export interface AgenceEquipePresentation extends Struct.ComponentSchema {
       'agence.equipe-presentation-item',
       true
     >;
-    Image: Schema.Attribute.Media<'images' | 'files'> &
-      Schema.Attribute.Required;
     Titre: Schema.Attribute.Component<'ui.titre', false>;
   };
 }
@@ -91,6 +89,8 @@ export interface AgenceEquipePresentationItem extends Struct.ComponentSchema {
   };
   attributes: {
     Description: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    Image: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
     Nom: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'Un p\u00F4le Conseil'>;
@@ -369,6 +369,7 @@ export interface GlobalExpertiseItem extends Struct.ComponentSchema {
   attributes: {
     Bouton: Schema.Attribute.Component<'ui.bouton', false>;
     Description: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    Image: Schema.Attribute.Media<'images' | 'files'>;
     Listes: Schema.Attribute.Blocks & Schema.Attribute.Required;
     Name: Schema.Attribute.String &
       Schema.Attribute.Required &

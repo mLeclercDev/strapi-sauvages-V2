@@ -14,15 +14,6 @@
       "type": "text",
       "default": "Chez nous, c’est la force qui unit l’équipe, les talents, les projets et les clients. "
     },
-    "Image": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images",
-        "files"
-      ]
-    },
     "EquipePresentationItem": {
       "type": "component",
       "component": "agence.equipe-presentation-item",

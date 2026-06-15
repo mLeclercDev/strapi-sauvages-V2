@@ -13,6 +13,15 @@
     "Description": {
       "type": "blocks",
       "required": true
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
     }
   },
   "config": {}
