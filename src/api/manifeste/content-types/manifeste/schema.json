@@ -15,7 +15,8 @@
       "type": "dynamiczone",
       "components": [
         "manifeste.missions",
-        "manifeste.hero-section"
+        "manifeste.hero-section",
+        "agence.cta"
       ]
     }
   }

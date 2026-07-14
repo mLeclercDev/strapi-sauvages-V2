@@ -834,7 +834,7 @@ export interface ApiManifesteManifeste extends Struct.SingleTypeSchema {
   };
   attributes: {
     Contenu: Schema.Attribute.DynamicZone<
-      ['manifeste.missions', 'manifeste.hero-section']
+      ['manifeste.missions', 'manifeste.hero-section', 'agence.cta']
     >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
