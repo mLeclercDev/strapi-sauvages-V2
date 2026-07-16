@@ -453,8 +453,11 @@ export interface ApiAgenceAgence extends Struct.SingleTypeSchema {
         'global.blog-listing',
         'agence.identite-item',
         'agence.cta',
+        'global.projets-listing',
         'global.titre-texte',
         'global.clients-scroll',
+        'global.texte-image',
+        'homepage.intro',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -682,6 +685,8 @@ export interface ApiExpertiseListingExpertiseListing
         'global.projets-listing',
         'global.titre-texte',
         'global.clients-scroll',
+        'global.texte-image',
+        'homepage.intro',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -718,6 +723,8 @@ export interface ApiExpertiseExpertise extends Struct.CollectionTypeSchema {
         'global.projets-listing',
         'global.titre-texte',
         'global.clients-scroll',
+        'global.texte-image',
+        'homepage.intro',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -824,8 +831,10 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
         'homepage.hero-section',
         'homepage.intro',
         'global.expertises-listing',
+        'global.projets-listing',
         'global.titre-texte',
         'global.clients-scroll',
+        'global.texte-image',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -860,8 +869,11 @@ export interface ApiManifesteManifeste extends Struct.SingleTypeSchema {
         'manifeste.missions',
         'manifeste.hero-section',
         'agence.cta',
+        'global.projets-listing',
         'global.titre-texte',
         'global.clients-scroll',
+        'global.texte-image',
+        'homepage.intro',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -941,7 +953,13 @@ export interface ApiWorkWork extends Struct.SingleTypeSchema {
   };
   attributes: {
     Contenu: Schema.Attribute.DynamicZone<
-      ['global.projets-listing', 'global.titre-texte', 'global.clients-scroll']
+      [
+        'global.projets-listing',
+        'global.titre-texte',
+        'global.clients-scroll',
+        'global.texte-image',
+        'homepage.intro',
+      ]
     >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

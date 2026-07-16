@@ -437,6 +437,19 @@ export interface GlobalProjetsListing extends Struct.ComponentSchema {
   };
 }
 
+export interface GlobalTexteImage extends Struct.ComponentSchema {
+  collectionName: 'components_global_texte_images';
+  info: {
+    displayName: 'Texte Image';
+  };
+  attributes: {
+    Image: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    Texte: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    Titre: Schema.Attribute.Component<'ui.titre', false>;
+  };
+}
+
 export interface GlobalTitreTexte extends Struct.ComponentSchema {
   collectionName: 'components_global_titre_textes';
   info: {
@@ -756,6 +769,7 @@ declare module '@strapi/strapi' {
       'global.expertises-listing': GlobalExpertisesListing;
       'global.intro-image': GlobalIntroImage;
       'global.projets-listing': GlobalProjetsListing;
+      'global.texte-image': GlobalTexteImage;
       'global.titre-texte': GlobalTitreTexte;
       'header.navigation-item': HeaderNavigationItem;
       'homepage.hero-section': HomepageHeroSection;

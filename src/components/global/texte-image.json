@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_global_texte_images",
+  "info": {
+    "displayName": "Texte Image"
+  },
+  "options": {},
+  "attributes": {
+    "Titre": {
+      "type": "component",
+      "component": "ui.titre",
+      "repeatable": false
+    },
+    "Texte": {
+      "type": "blocks",
+      "required": true
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  },
+  "config": {}
+}

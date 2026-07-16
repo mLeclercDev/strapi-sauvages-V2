@@ -17,8 +17,10 @@
         "homepage.hero-section",
         "homepage.intro",
         "global.expertises-listing",
+        "global.projets-listing",
         "global.titre-texte",
-        "global.clients-scroll"
+        "global.clients-scroll",
+        "global.texte-image"
       ]
     }
   }

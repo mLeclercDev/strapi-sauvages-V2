@@ -24,8 +24,11 @@
         "global.blog-listing",
         "agence.identite-item",
         "agence.cta",
+        "global.projets-listing",
         "global.titre-texte",
-        "global.clients-scroll"
+        "global.clients-scroll",
+        "global.texte-image",
+        "homepage.intro"
       ]
     }
   }
