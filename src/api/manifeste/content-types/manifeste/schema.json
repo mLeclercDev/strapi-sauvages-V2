@@ -16,7 +16,8 @@
       "components": [
         "manifeste.missions",
         "manifeste.hero-section",
-        "agence.cta"
+        "agence.cta",
+        "global.titre-texte"
       ]
     }
   }

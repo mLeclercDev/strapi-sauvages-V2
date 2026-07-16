@@ -16,7 +16,8 @@
       "components": [
         "homepage.hero-section",
         "homepage.intro",
-        "global.expertises-listing"
+        "global.expertises-listing",
+        "global.titre-texte"
       ]
     }
   }

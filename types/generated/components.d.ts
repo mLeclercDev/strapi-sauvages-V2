@@ -405,6 +405,28 @@ export interface GlobalIntroImage extends Struct.ComponentSchema {
   };
 }
 
+export interface GlobalProjetsListing extends Struct.ComponentSchema {
+  collectionName: 'components_global_projets_listings';
+  info: {
+    displayName: 'Projets listing';
+  };
+  attributes: {
+    Bouton: Schema.Attribute.Component<'ui.bouton', false>;
+    Titre: Schema.Attribute.Component<'ui.titre', false>;
+  };
+}
+
+export interface GlobalTitreTexte extends Struct.ComponentSchema {
+  collectionName: 'components_global_titre_textes';
+  info: {
+    displayName: 'Titre Texte';
+  };
+  attributes: {
+    Texte: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    Titre: Schema.Attribute.Component<'ui.titre', false>;
+  };
+}
+
 export interface HeaderNavigationItem extends Struct.ComponentSchema {
   collectionName: 'components_header_navigation_items';
   info: {
@@ -710,6 +732,8 @@ declare module '@strapi/strapi' {
       'global.expertise-item': GlobalExpertiseItem;
       'global.expertises-listing': GlobalExpertisesListing;
       'global.intro-image': GlobalIntroImage;
+      'global.projets-listing': GlobalProjetsListing;
+      'global.titre-texte': GlobalTitreTexte;
       'header.navigation-item': HeaderNavigationItem;
       'homepage.hero-section': HomepageHeroSection;
       'homepage.intro': HomepageIntro;

@@ -15,7 +15,9 @@
       "type": "dynamiczone",
       "components": [
         "expertise.hero-section",
-        "global.expertises-listing"
+        "global.expertises-listing",
+        "global.projets-listing",
+        "global.titre-texte"
       ]
     }
   }

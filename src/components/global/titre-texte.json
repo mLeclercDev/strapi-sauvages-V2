@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_global_titre_textes",
+  "info": {
+    "displayName": "Titre Texte"
+  },
+  "options": {},
+  "attributes": {
+    "Titre": {
+      "type": "component",
+      "component": "ui.titre",
+      "repeatable": false
+    },
+    "Texte": {
+      "type": "blocks",
+      "required": true
+    }
+  },
+  "config": {}
+}

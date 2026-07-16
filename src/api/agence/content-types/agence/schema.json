@@ -23,7 +23,8 @@
         "agence.histoire",
         "global.blog-listing",
         "agence.identite-item",
-        "agence.cta"
+        "agence.cta",
+        "global.titre-texte"
       ]
     }
   }

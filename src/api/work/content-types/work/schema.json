@@ -26,6 +26,13 @@
         "videos",
         "audios"
       ]
+    },
+    "Contenu": {
+      "type": "dynamiczone",
+      "components": [
+        "global.projets-listing",
+        "global.titre-texte"
+      ]
     }
   }
 }

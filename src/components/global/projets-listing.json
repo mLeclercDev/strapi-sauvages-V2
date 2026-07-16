@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_global_projets_listings",
+  "info": {
+    "displayName": "Projets listing"
+  },
+  "options": {},
+  "attributes": {
+    "Titre": {
+      "type": "component",
+      "component": "ui.titre",
+      "repeatable": false
+    },
+    "Bouton": {
+      "type": "component",
+      "component": "ui.bouton",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

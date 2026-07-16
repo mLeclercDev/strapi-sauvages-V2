@@ -453,6 +453,7 @@ export interface ApiAgenceAgence extends Struct.SingleTypeSchema {
         'global.blog-listing',
         'agence.identite-item',
         'agence.cta',
+        'global.titre-texte',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -669,7 +670,12 @@ export interface ApiExpertiseListingExpertiseListing
   };
   attributes: {
     Contenu: Schema.Attribute.DynamicZone<
-      ['expertise.hero-section', 'global.expertises-listing']
+      [
+        'expertise.hero-section',
+        'global.expertises-listing',
+        'global.projets-listing',
+        'global.titre-texte',
+      ]
     >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -702,6 +708,8 @@ export interface ApiExpertiseExpertise extends Struct.CollectionTypeSchema {
       [
         'expertise.expertise-description-single',
         'expertise.hero-section-single',
+        'global.projets-listing',
+        'global.titre-texte',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -804,7 +812,12 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
   };
   attributes: {
     Contenu: Schema.Attribute.DynamicZone<
-      ['homepage.hero-section', 'homepage.intro', 'global.expertises-listing']
+      [
+        'homepage.hero-section',
+        'homepage.intro',
+        'global.expertises-listing',
+        'global.titre-texte',
+      ]
     >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -834,7 +847,12 @@ export interface ApiManifesteManifeste extends Struct.SingleTypeSchema {
   };
   attributes: {
     Contenu: Schema.Attribute.DynamicZone<
-      ['manifeste.missions', 'manifeste.hero-section', 'agence.cta']
+      [
+        'manifeste.missions',
+        'manifeste.hero-section',
+        'agence.cta',
+        'global.titre-texte',
+      ]
     >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -912,6 +930,9 @@ export interface ApiWorkWork extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    Contenu: Schema.Attribute.DynamicZone<
+      ['global.projets-listing', 'global.titre-texte']
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
