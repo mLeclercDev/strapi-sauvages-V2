@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_global_full_width_images",
+  "info": {
+    "displayName": "Full Width Image"
+  },
+  "options": {},
+  "attributes": {
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "Alt": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

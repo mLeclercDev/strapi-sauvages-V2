@@ -34,7 +34,9 @@
         "global.titre-texte",
         "global.clients-scroll",
         "global.texte-image",
-        "homepage.intro"
+        "homepage.intro",
+        "global.full-width-image",
+        "global.text-reveal"
       ]
     }
   }

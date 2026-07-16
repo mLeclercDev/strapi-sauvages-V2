@@ -458,6 +458,8 @@ export interface ApiAgenceAgence extends Struct.SingleTypeSchema {
         'global.clients-scroll',
         'global.texte-image',
         'homepage.intro',
+        'global.full-width-image',
+        'global.text-reveal',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -687,6 +689,8 @@ export interface ApiExpertiseListingExpertiseListing
         'global.clients-scroll',
         'global.texte-image',
         'homepage.intro',
+        'global.full-width-image',
+        'global.text-reveal',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -725,6 +729,8 @@ export interface ApiExpertiseExpertise extends Struct.CollectionTypeSchema {
         'global.clients-scroll',
         'global.texte-image',
         'homepage.intro',
+        'global.full-width-image',
+        'global.text-reveal',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -830,6 +836,8 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
       [
         'homepage.hero-section',
         'homepage.intro',
+        'global.full-width-image',
+        'global.text-reveal',
         'global.expertises-listing',
         'global.projets-listing',
         'global.titre-texte',
@@ -874,6 +882,8 @@ export interface ApiManifesteManifeste extends Struct.SingleTypeSchema {
         'global.clients-scroll',
         'global.texte-image',
         'homepage.intro',
+        'global.full-width-image',
+        'global.text-reveal',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -959,6 +969,8 @@ export interface ApiWorkWork extends Struct.SingleTypeSchema {
         'global.clients-scroll',
         'global.texte-image',
         'homepage.intro',
+        'global.full-width-image',
+        'global.text-reveal',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;

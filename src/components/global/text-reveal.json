@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_global_text_reveals",
+  "info": {
+    "displayName": "Text Reveal"
+  },
+  "options": {},
+  "attributes": {
+    "Label": {
+      "type": "string"
+    },
+    "Texte": {
+      "type": "text",
+      "required": true
+    }
+  },
+  "config": {}
+}

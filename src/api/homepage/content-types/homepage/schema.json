@@ -16,6 +16,8 @@
       "components": [
         "homepage.hero-section",
         "homepage.intro",
+        "global.full-width-image",
+        "global.text-reveal",
         "global.expertises-listing",
         "global.projets-listing",
         "global.titre-texte",

@@ -414,6 +414,18 @@ export interface GlobalExpertisesListing extends Struct.ComponentSchema {
   };
 }
 
+export interface GlobalFullWidthImage extends Struct.ComponentSchema {
+  collectionName: 'components_global_full_width_images';
+  info: {
+    displayName: 'Full Width Image';
+  };
+  attributes: {
+    Alt: Schema.Attribute.String;
+    Image: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+  };
+}
+
 export interface GlobalIntroImage extends Struct.ComponentSchema {
   collectionName: 'components_global_intro_images';
   info: {
@@ -434,6 +446,17 @@ export interface GlobalProjetsListing extends Struct.ComponentSchema {
   attributes: {
     Bouton: Schema.Attribute.Component<'ui.bouton', false>;
     Titre: Schema.Attribute.Component<'ui.titre', false>;
+  };
+}
+
+export interface GlobalTextReveal extends Struct.ComponentSchema {
+  collectionName: 'components_global_text_reveals';
+  info: {
+    displayName: 'Text Reveal';
+  };
+  attributes: {
+    Label: Schema.Attribute.String;
+    Texte: Schema.Attribute.Text & Schema.Attribute.Required;
   };
 }
 
@@ -767,8 +790,10 @@ declare module '@strapi/strapi' {
       'global.clients-scroll': GlobalClientsScroll;
       'global.expertise-item': GlobalExpertiseItem;
       'global.expertises-listing': GlobalExpertisesListing;
+      'global.full-width-image': GlobalFullWidthImage;
       'global.intro-image': GlobalIntroImage;
       'global.projets-listing': GlobalProjetsListing;
+      'global.text-reveal': GlobalTextReveal;
       'global.texte-image': GlobalTexteImage;
       'global.titre-texte': GlobalTitreTexte;
       'header.navigation-item': HeaderNavigationItem;
