@@ -150,6 +150,16 @@ export interface AgenceIdentiteItem extends Struct.ComponentSchema {
   };
 }
 
+export interface ClientCompetence extends Struct.ComponentSchema {
+  collectionName: 'components_client_competences';
+  info: {
+    displayName: 'Competence';
+  };
+  attributes: {
+    Nom: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface ContactChampDeFormulaire extends Struct.ComponentSchema {
   collectionName: 'components_contact_champ_de_formulaires';
   info: {
@@ -357,6 +367,17 @@ export interface GlobalCarouselDeLogo extends Struct.ComponentSchema {
       true
     > &
       Schema.Attribute.Required;
+    Titre: Schema.Attribute.Component<'ui.titre', false>;
+  };
+}
+
+export interface GlobalClientsScroll extends Struct.ComponentSchema {
+  collectionName: 'components_global_clients_scrolls';
+  info: {
+    displayName: 'Clients scroll';
+  };
+  attributes: {
+    Label: Schema.Attribute.String;
     Titre: Schema.Attribute.Component<'ui.titre', false>;
   };
 }
@@ -716,6 +737,7 @@ declare module '@strapi/strapi' {
       'agence.histoire': AgenceHistoire;
       'agence.identite': AgenceIdentite;
       'agence.identite-item': AgenceIdentiteItem;
+      'client.competence': ClientCompetence;
       'contact.champ-de-formulaire': ContactChampDeFormulaire;
       'contact.formulaire': ContactFormulaire;
       'contact.hero-contact': ContactHeroContact;
@@ -729,6 +751,7 @@ declare module '@strapi/strapi' {
       'footer.liens': FooterLiens;
       'global.blog-listing': GlobalBlogListing;
       'global.carousel-de-logo': GlobalCarouselDeLogo;
+      'global.clients-scroll': GlobalClientsScroll;
       'global.expertise-item': GlobalExpertiseItem;
       'global.expertises-listing': GlobalExpertisesListing;
       'global.intro-image': GlobalIntroImage;

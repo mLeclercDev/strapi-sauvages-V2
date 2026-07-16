@@ -17,6 +17,25 @@
     },
     "public": {
       "type": "boolean"
+    },
+    "Logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "Afficher": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "Competences": {
+      "type": "component",
+      "component": "client.competence",
+      "repeatable": true
     }
   }
 }

@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_client_competences",
+  "info": {
+    "displayName": "Competence"
+  },
+  "options": {},
+  "attributes": {
+    "Nom": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

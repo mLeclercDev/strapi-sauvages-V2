@@ -17,7 +17,8 @@
         "expertise.hero-section",
         "global.expertises-listing",
         "global.projets-listing",
-        "global.titre-texte"
+        "global.titre-texte",
+        "global.clients-scroll"
       ]
     }
   }

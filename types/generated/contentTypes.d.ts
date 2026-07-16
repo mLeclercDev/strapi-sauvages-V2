@@ -454,6 +454,7 @@ export interface ApiAgenceAgence extends Struct.SingleTypeSchema {
         'agence.identite-item',
         'agence.cta',
         'global.titre-texte',
+        'global.clients-scroll',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -610,6 +611,10 @@ export interface ApiClientClient extends Struct.CollectionTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
+    Afficher: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
+    Competences: Schema.Attribute.Component<'client.competence', true>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -619,6 +624,7 @@ export interface ApiClientClient extends Struct.CollectionTypeSchema {
       'api::client.client'
     > &
       Schema.Attribute.Private;
+    Logo: Schema.Attribute.Media<'images' | 'files'>;
     name: Schema.Attribute.String;
     public: Schema.Attribute.Boolean;
     publishedAt: Schema.Attribute.DateTime;
@@ -675,6 +681,7 @@ export interface ApiExpertiseListingExpertiseListing
         'global.expertises-listing',
         'global.projets-listing',
         'global.titre-texte',
+        'global.clients-scroll',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -710,6 +717,7 @@ export interface ApiExpertiseExpertise extends Struct.CollectionTypeSchema {
         'expertise.hero-section-single',
         'global.projets-listing',
         'global.titre-texte',
+        'global.clients-scroll',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -817,6 +825,7 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
         'homepage.intro',
         'global.expertises-listing',
         'global.titre-texte',
+        'global.clients-scroll',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -852,6 +861,7 @@ export interface ApiManifesteManifeste extends Struct.SingleTypeSchema {
         'manifeste.hero-section',
         'agence.cta',
         'global.titre-texte',
+        'global.clients-scroll',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -931,7 +941,7 @@ export interface ApiWorkWork extends Struct.SingleTypeSchema {
   };
   attributes: {
     Contenu: Schema.Attribute.DynamicZone<
-      ['global.projets-listing', 'global.titre-texte']
+      ['global.projets-listing', 'global.titre-texte', 'global.clients-scroll']
     >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

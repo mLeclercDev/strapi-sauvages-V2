@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_global_clients_scrolls",
+  "info": {
+    "displayName": "Clients scroll"
+  },
+  "options": {},
+  "attributes": {
+    "Label": {
+      "type": "string"
+    },
+    "Titre": {
+      "type": "component",
+      "component": "ui.titre",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}
