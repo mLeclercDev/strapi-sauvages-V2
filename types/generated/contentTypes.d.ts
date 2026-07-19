@@ -836,6 +836,7 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
       [
         'homepage.hero-section',
         'homepage.intro',
+        'global.blog-listing',
         'global.full-width-image',
         'global.text-reveal',
         'global.expertises-listing',
