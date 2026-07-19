@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_global_texte_image_options",
+  "info": {
+    "displayName": "Texte Image Option"
+  },
+  "options": {},
+  "attributes": {
+    "Titre": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "blocks"
+    }
+  },
+  "config": {}
+}

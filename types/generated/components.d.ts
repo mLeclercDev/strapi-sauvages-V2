@@ -471,8 +471,20 @@ export interface GlobalTexteImage extends Struct.ComponentSchema {
   attributes: {
     Image: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
+    Options: Schema.Attribute.Component<'global.texte-image-option', true>;
     Texte: Schema.Attribute.Blocks & Schema.Attribute.Required;
     Titre: Schema.Attribute.Component<'ui.titre', false>;
+  };
+}
+
+export interface GlobalTexteImageOption extends Struct.ComponentSchema {
+  collectionName: 'components_global_texte_image_options';
+  info: {
+    displayName: 'Texte Image Option';
+  };
+  attributes: {
+    Description: Schema.Attribute.Blocks;
+    Titre: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -798,6 +810,7 @@ declare module '@strapi/strapi' {
       'global.projets-listing': GlobalProjetsListing;
       'global.text-reveal': GlobalTextReveal;
       'global.texte-image': GlobalTexteImage;
+      'global.texte-image-option': GlobalTexteImageOption;
       'global.titre-texte': GlobalTitreTexte;
       'header.navigation-item': HeaderNavigationItem;
       'homepage.hero-section': HomepageHeroSection;
