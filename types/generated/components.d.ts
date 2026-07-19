@@ -205,6 +205,7 @@ export interface ContactHeroContact extends Struct.ComponentSchema {
     displayName: 'Hero contact';
   };
   attributes: {
+    Description: Schema.Attribute.Blocks;
     IconBouton1: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
     IconBouton2: Schema.Attribute.Media<'images' | 'files'> &
