@@ -478,6 +478,34 @@ export interface ApiAgenceAgence extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiArticleTypeArticleType extends Struct.CollectionTypeSchema {
+  collectionName: 'article_types';
+  info: {
+    displayName: "Type d'article";
+    pluralName: 'article-types';
+    singularName: 'article-type';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::article-type.article-type'
+    > &
+      Schema.Attribute.Private;
+    Nom: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
   collectionName: 'articles';
   info: {
@@ -502,9 +530,14 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    Resume: Schema.Attribute.String;
     Titre: Schema.Attribute.Text &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'Intelligence Marketing Day 2025 - Une MasterClass sur l\u2019Authenticit\u00E9'>;
+    Type: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::article-type.article-type'
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1507,6 +1540,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::agence.agence': ApiAgenceAgence;
+      'api::article-type.article-type': ApiArticleTypeArticleType;
       'api::article.article': ApiArticleArticle;
       'api::blog-section.blog-section': ApiBlogSectionBlogSection;
       'api::blog.blog': ApiBlogBlog;
