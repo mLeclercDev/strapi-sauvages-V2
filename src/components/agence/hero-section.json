@@ -21,6 +21,14 @@
         "images",
         "files"
       ]
+    },
+    "IdentiteTexte": {
+      "type": "blocks"
+    },
+    "IdentiteItem": {
+      "type": "component",
+      "component": "agence.identite-item",
+      "repeatable": true
     }
   },
   "config": {}

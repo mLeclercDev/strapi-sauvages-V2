@@ -103,6 +103,8 @@ export interface AgenceHeroSection extends Struct.ComponentSchema {
     displayName: 'Hero section';
   };
   attributes: {
+    IdentiteItem: Schema.Attribute.Component<'agence.identite-item', true>;
+    IdentiteTexte: Schema.Attribute.Blocks;
     Image: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
     Label: Schema.Attribute.String &
