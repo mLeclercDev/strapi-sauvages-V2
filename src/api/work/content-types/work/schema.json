@@ -16,17 +16,6 @@
       "default": "Projets",
       "required": true
     },
-    "Images": {
-      "type": "media",
-      "multiple": true,
-      "required": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
     "Contenu": {
       "type": "dynamiczone",
       "components": [
