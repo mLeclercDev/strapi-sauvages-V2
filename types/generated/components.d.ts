@@ -194,7 +194,9 @@ export interface ContactFormulaire extends Struct.ComponentSchema {
     displayName: 'Formulaire';
   };
   attributes: {
+    Accroche: Schema.Attribute.String;
     Champs: Schema.Attribute.Component<'contact.champ-de-formulaire', true>;
+    Icone: Schema.Attribute.Media<'images' | 'files'>;
     TitreFormulaire: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'J\u2019ai un projet'>;

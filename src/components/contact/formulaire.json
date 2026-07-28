@@ -10,6 +10,17 @@
       "default": "J’ai un projet",
       "required": true
     },
+    "Accroche": {
+      "type": "string"
+    },
+    "Icone": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
     "Champs": {
       "type": "component",
       "component": "contact.champ-de-formulaire",
