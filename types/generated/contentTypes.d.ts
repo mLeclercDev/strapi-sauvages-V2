@@ -976,6 +976,8 @@ export interface ApiProjetProjet extends Struct.CollectionTypeSchema {
     SEO: Schema.Attribute.Component<'shared.seo', false>;
     services: Schema.Attribute.Component<'projet.services', true>;
     slug: Schema.Attribute.UID<'title'>;
+    Statut: Schema.Attribute.Enumeration<['actif', 'archive', 'vus_pas_pris']> &
+      Schema.Attribute.DefaultTo<'actif'>;
     thumbnail: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
