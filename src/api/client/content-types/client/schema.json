@@ -36,6 +36,15 @@
       "type": "component",
       "component": "client.competence",
       "repeatable": true
+    },
+    "Favicon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
     }
   }
 }
