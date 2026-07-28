@@ -496,6 +496,7 @@ export interface GlobalTitreTexte extends Struct.ComponentSchema {
     displayName: 'Titre Texte';
   };
   attributes: {
+    Image: Schema.Attribute.Media<'images' | 'files'>;
     Texte: Schema.Attribute.Blocks & Schema.Attribute.Required;
     Titre: Schema.Attribute.Component<'ui.titre', false>;
   };
