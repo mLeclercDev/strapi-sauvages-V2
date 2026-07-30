@@ -10,6 +10,9 @@
       "component": "ui.titre",
       "repeatable": false
     },
+    "Description": {
+      "type": "blocks"
+    },
     "Bouton": {
       "type": "component",
       "component": "ui.bouton",
