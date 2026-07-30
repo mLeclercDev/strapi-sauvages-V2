@@ -13,13 +13,10 @@
     "Description": {
       "type": "text"
     },
-    "URL": {
-      "type": "string",
-      "required": true
-    },
-    "TexteDuLien": {
-      "type": "string",
-      "default": "Tout voir"
+    "Bouton": {
+      "type": "component",
+      "component": "ui.bouton",
+      "repeatable": false
     }
   },
   "config": {}
