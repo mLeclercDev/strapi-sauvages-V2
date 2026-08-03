@@ -95,6 +95,11 @@
         "vus_pas_pris"
       ],
       "default": "actif"
+    },
+    "Galerie": {
+      "type": "component",
+      "component": "projet.image-block",
+      "repeatable": true
     }
   }
 }

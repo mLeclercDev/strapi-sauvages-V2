@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_projet_image_blocks",
+  "info": {
+    "displayName": "Image Block"
+  },
+  "options": {},
+  "attributes": {
+    "Disposition": {
+      "type": "enumeration",
+      "enum": ["simple", "double"],
+      "required": true,
+      "default": "simple"
+    },
+    "Images": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": ["images", "files"]
+    }
+  }
+}
