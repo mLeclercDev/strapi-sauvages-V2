@@ -964,6 +964,7 @@ export interface ApiProjetProjet extends Struct.CollectionTypeSchema {
       'manyToMany',
       'api::expertise.expertise'
     >;
+    Galerie: Schema.Attribute.Component<'projet.image-block', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

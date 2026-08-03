@@ -351,11 +351,9 @@ export interface GlobalBlogListing extends Struct.ComponentSchema {
     displayName: 'Blog listing';
   };
   attributes: {
+    Bouton: Schema.Attribute.Component<'ui.bouton', false>;
     Description: Schema.Attribute.Text;
-    TexteDuLien: Schema.Attribute.String &
-      Schema.Attribute.DefaultTo<'Tout voir'>;
     Titre: Schema.Attribute.Component<'ui.titre', false>;
-    URL: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -413,6 +411,7 @@ export interface GlobalExpertisesListing extends Struct.ComponentSchema {
   };
   attributes: {
     Bouton: Schema.Attribute.Component<'ui.bouton', false>;
+    Description: Schema.Attribute.Blocks;
     Item: Schema.Attribute.Component<'global.expertise-item', true> &
       Schema.Attribute.Required;
     Titre: Schema.Attribute.Component<'ui.titre', false>;
@@ -663,6 +662,20 @@ export interface ProjetColorSection extends Struct.ComponentSchema {
   };
 }
 
+export interface ProjetImageBlock extends Struct.ComponentSchema {
+  collectionName: 'components_projet_image_blocks';
+  info: {
+    displayName: 'Image Block';
+  };
+  attributes: {
+    Disposition: Schema.Attribute.Enumeration<['simple', 'double']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'simple'>;
+    Images: Schema.Attribute.Media<'images' | 'files', true> &
+      Schema.Attribute.Required;
+  };
+}
+
 export interface ProjetSections extends Struct.ComponentSchema {
   collectionName: 'components_projet_sections';
   info: {
@@ -825,6 +838,7 @@ declare module '@strapi/strapi' {
       'projet.chiffres': ProjetChiffres;
       'projet.chiffres-section': ProjetChiffresSection;
       'projet.color-section': ProjetColorSection;
+      'projet.image-block': ProjetImageBlock;
       'projet.sections': ProjetSections;
       'projet.services': ProjetServices;
       'projets.hero-section': ProjetsHeroSection;
