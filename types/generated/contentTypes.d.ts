@@ -757,7 +757,6 @@ export interface ApiExpertiseExpertise extends Struct.CollectionTypeSchema {
     Contenu: Schema.Attribute.DynamicZone<
       [
         'expertise.expertise-description-single',
-        'expertise.hero-section-single',
         'global.projets-listing',
         'global.titre-texte',
         'global.clients-scroll',
