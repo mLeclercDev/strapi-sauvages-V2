@@ -258,18 +258,9 @@ export interface ExpertiseExpertiseDescriptionSingle
     displayName: 'Expertise description Single';
   };
   attributes: {
-    Description: Schema.Attribute.Blocks & Schema.Attribute.Required;
-    Image: Schema.Attribute.Media<'images' | 'files'> &
-      Schema.Attribute.Required;
-    Label: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'Notre accompagnement strat\u00E9gique'>;
-    Listes: Schema.Attribute.Blocks;
-    Texte: Schema.Attribute.Blocks & Schema.Attribute.Required;
-    Titre: Schema.Attribute.Component<'ui.titre', false>;
-    Titre2: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'Lorem ipsum'>;
+    Description: Schema.Attribute.Blocks;
+    Image: Schema.Attribute.Media<'images' | 'files'>;
+    Intro: Schema.Attribute.String;
   };
 }
 
@@ -671,7 +662,7 @@ export interface ProjetImageBlock extends Struct.ComponentSchema {
     Disposition: Schema.Attribute.Enumeration<['simple', 'double']> &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'simple'>;
-    Images: Schema.Attribute.Media<'images' | 'files', true> &
+    Images: Schema.Attribute.Media<'images' | 'files' | 'videos', true> &
       Schema.Attribute.Required;
   };
 }
