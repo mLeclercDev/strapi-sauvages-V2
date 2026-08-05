@@ -15,6 +15,9 @@
     "name": {
       "type": "string"
     },
+    "sector": {
+      "type": "string"
+    },
     "public": {
       "type": "boolean"
     },
