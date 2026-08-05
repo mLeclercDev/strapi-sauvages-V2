@@ -667,6 +667,7 @@ export interface ApiClientClient extends Struct.CollectionTypeSchema {
     name: Schema.Attribute.String;
     public: Schema.Attribute.Boolean;
     publishedAt: Schema.Attribute.DateTime;
+    sector: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

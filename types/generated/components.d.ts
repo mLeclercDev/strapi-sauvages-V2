@@ -216,6 +216,7 @@ export interface ContactHeroContact extends Struct.ComponentSchema {
       Schema.Attribute.Required;
     Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Schema.Attribute.Required;
+    LienCalendrier: Schema.Attribute.String;
     TexteBouton1: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'r\u00E9server un appel'>;
