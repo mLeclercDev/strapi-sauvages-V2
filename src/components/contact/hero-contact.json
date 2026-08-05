@@ -24,6 +24,9 @@
         "audios"
       ]
     },
+    "LienCalendrier": {
+      "type": "string"
+    },
     "TexteBouton1": {
       "type": "string",
       "default": "réserver un appel",
