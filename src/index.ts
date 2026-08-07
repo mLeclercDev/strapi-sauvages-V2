@@ -1,20 +1,33 @@
-// import type { Core } from '@strapi/strapi';
+import type { Core } from '@strapi/strapi';
+import sharp from 'sharp';
+import fs from 'fs';
 
 export default {
-  /**
-   * An asynchronous register function that runs before
-   * your application is initialized.
-   *
-   * This gives you an opportunity to extend code.
-   */
-  register(/* { strapi }: { strapi: Core.Strapi } */) {},
+  register({ strapi }: { strapi: Core.Strapi }) {},
 
-  /**
-   * An asynchronous bootstrap function that runs before
-   * your application gets started.
-   *
-   * This gives you an opportunity to set up your data model,
-   * run jobs, or perform some special logic.
-   */
-  bootstrap(/* { strapi }: { strapi: Core.Strapi } */) {},
+  async bootstrap({ strapi }: { strapi: Core.Strapi }) {
+    const uploadService = strapi.plugin('upload').service('upload');
+    const originalUpload = uploadService.upload.bind(uploadService);
+
+    uploadService.upload = async (args: any) => {
+      const { files } = args;
+      const fileArray = Array.isArray(files) ? files : [files];
+
+      for (const file of fileArray) {
+        if (file.mimetype?.startsWith('image/') && file.filepath) {
+          try {
+            const rotated = await sharp(file.filepath).rotate().toBuffer({ resolveWithObject: true });
+            fs.writeFileSync(file.filepath, rotated.data);
+            file.size = rotated.data.length / 1024;
+            file.width = rotated.info.width;
+            file.height = rotated.info.height;
+          } catch (e) {
+            // non-bloquant si Sharp échoue sur ce fichier
+          }
+        }
+      }
+
+      return originalUpload(args);
+    };
+  },
 };
