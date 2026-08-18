@@ -181,7 +181,7 @@ export interface ContactChampDeFormulaire extends Struct.ComponentSchema {
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'Pierre Dubois'>;
     Type: Schema.Attribute.Enumeration<
-      ['texte', 'mail', 'telephone', 'fichier', 'select']
+      ['texte', 'mail', 'telephone', 'fichier', 'select', 'textarea']
     > &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'texte'>;

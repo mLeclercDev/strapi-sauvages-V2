@@ -521,6 +521,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    DatePublication: Schema.Attribute.Date;
     Image: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -667,6 +668,7 @@ export interface ApiClientClient extends Struct.CollectionTypeSchema {
     name: Schema.Attribute.String;
     public: Schema.Attribute.Boolean;
     publishedAt: Schema.Attribute.DateTime;
+    rank: Schema.Attribute.Integer;
     sector: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -931,6 +933,36 @@ export interface ApiManifesteManifeste extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPageLegalePageLegale extends Struct.CollectionTypeSchema {
+  collectionName: 'pages_legales';
+  info: {
+    displayName: 'Page l\u00E9gale';
+    pluralName: 'pages-legales';
+    singularName: 'page-legale';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Contenu: Schema.Attribute.Blocks;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::page-legale.page-legale'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'Titre'>;
+    Titre: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1552,6 +1584,7 @@ declare module '@strapi/strapi' {
       'api::header.header': ApiHeaderHeader;
       'api::homepage.homepage': ApiHomepageHomepage;
       'api::manifeste.manifeste': ApiManifesteManifeste;
+      'api::page-legale.page-legale': ApiPageLegalePageLegale;
       'api::projet.projet': ApiProjetProjet;
       'api::work.work': ApiWorkWork;
       'plugin::content-releases.release': PluginContentReleasesRelease;
