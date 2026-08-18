@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pages_legales",
+  "info": {
+    "singularName": "page-legale",
+    "pluralName": "pages-legales",
+    "displayName": "Page légale"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titre": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Titre"
+    },
+    "Contenu": {
+      "type": "blocks"
+    }
+  }
+}
