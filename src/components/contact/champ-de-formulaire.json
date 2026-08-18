@@ -19,7 +19,8 @@
         "mail",
         "telephone",
         "fichier",
-        "select"
+        "select",
+        "textarea"
       ]
     },
     "Intitule": {
