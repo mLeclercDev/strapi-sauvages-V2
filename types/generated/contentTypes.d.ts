@@ -532,7 +532,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     Resume: Schema.Attribute.String;
-    Titre: Schema.Attribute.Text &
+    Titre: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'Intelligence Marketing Day 2025 - Une MasterClass sur l\u2019Authenticit\u00E9'>;
     Type: Schema.Attribute.Relation<
