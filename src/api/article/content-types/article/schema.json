@@ -12,7 +12,7 @@
   "pluginOptions": {},
   "attributes": {
     "Titre": {
-      "type": "text",
+      "type": "string",
       "default": "Intelligence Marketing Day 2025 - Une MasterClass sur l’Authenticité",
       "required": true
     },
