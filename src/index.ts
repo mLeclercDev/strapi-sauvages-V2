@@ -32,11 +32,29 @@ export default {
 
     // Force mainField "name" pour le relation picker Expertise
     const store = strapi.store({ type: 'plugin', name: 'content-manager' });
-    const key = 'configuration_content_types::api::expertise.expertise';
+    const key = 'configuration_content-types::api::expertise.expertise';
     const config = await store.get({ key }) as any;
     if (config?.settings) {
       config.settings.mainField = 'name';
       await store.set({ key, value: config });
+    } else {
+      await store.set({
+        key,
+        value: {
+          uid: 'api::expertise.expertise',
+          settings: {
+            mainField: 'name',
+            searchable: true,
+            filterable: true,
+            bulkable: true,
+            pageSize: 10,
+            defaultSortBy: 'name',
+            defaultSortOrder: 'ASC',
+          },
+          metadatas: {},
+          layouts: { list: [['name', 'createdAt']], edit: [[{ name: 'name', size: 6 }]] },
+        },
+      });
     }
   },
 };
