@@ -11,6 +11,11 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "Titre": {
+      "type": "string",
+      "default": "Homepage",
+      "required": true
+    },
     "Contenu": {
       "type": "dynamiczone",
       "components": [
