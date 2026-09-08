@@ -30,11 +30,12 @@ export default {
       return originalUpload(args);
     };
 
-    // Force mainField "name" pour le relation picker Expertise (SQL direct — clé avec underscores)
+    // Force mainField "name" pour le relation picker expertise DANS la config du Projet
+    // (le mainField d'une relation est stocké côté propriétaire de la relation, pas côté cible)
     await strapi.db.connection.raw(`
       UPDATE strapi_core_store_settings
-      SET value = JSON_SET(value, '$.settings.mainField', 'name', '$.settings.defaultSortBy', 'name')
-      WHERE key = 'plugin_content_manager_configuration_content_types::api::expertise.expertise'
+      SET value = JSON_SET(value, '$.metadatas.expertise.edit.mainField', 'name')
+      WHERE key = 'plugin_content_manager_configuration_content_types::api::projet.projet'
     `);
   },
 };
