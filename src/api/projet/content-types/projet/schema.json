@@ -19,7 +19,7 @@
       "type": "string"
     },
     "year": {
-      "type": "integer"
+      "type": "string"
     },
     "description": {
       "type": "richtext"
