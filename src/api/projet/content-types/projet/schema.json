@@ -84,6 +84,14 @@
         "audios"
       ]
     },
+    "thumbnailFallback": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
     "rank": {
       "type": "integer"
     },
