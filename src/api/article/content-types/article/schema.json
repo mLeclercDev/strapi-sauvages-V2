@@ -36,6 +36,9 @@
     "DatePublication": {
       "type": "date"
     },
+    "Auteur": {
+      "type": "string"
+    },
     "Contenu": {
       "type": "blocks",
       "required": true
