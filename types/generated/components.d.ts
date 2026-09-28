@@ -665,6 +665,7 @@ export interface ProjetImageBlock extends Struct.ComponentSchema {
       Schema.Attribute.DefaultTo<'simple'>;
     Images: Schema.Attribute.Media<'images' | 'files' | 'videos', true> &
       Schema.Attribute.Required;
+    Medias: Schema.Attribute.Component<'shared.media-item', true>;
   };
 }
 
@@ -680,6 +681,7 @@ export interface ProjetSections extends Struct.ComponentSchema {
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
+    medias: Schema.Attribute.Component<'shared.media-item', true>;
     title: Schema.Attribute.String;
   };
 }
@@ -738,6 +740,18 @@ export interface SharedInfinite extends Struct.ComponentSchema {
   };
   attributes: {
     projets: Schema.Attribute.Relation<'oneToMany', 'api::projet.projet'>;
+  };
+}
+
+export interface SharedMediaItem extends Struct.ComponentSchema {
+  collectionName: 'components_shared_media_items';
+  info: {
+    description: '';
+    displayName: 'Media Item';
+  };
+  attributes: {
+    media: Schema.Attribute.Media<'images' | 'videos'>;
+    vimeoUrl: Schema.Attribute.String;
   };
 }
 
@@ -837,6 +851,7 @@ declare module '@strapi/strapi' {
       'shared.banner': SharedBanner;
       'shared.card': SharedCard;
       'shared.infinite': SharedInfinite;
+      'shared.media-item': SharedMediaItem;
       'shared.seo': SharedSeo;
       'ui.bouton': UiBouton;
       'ui.titre': UiTitre;

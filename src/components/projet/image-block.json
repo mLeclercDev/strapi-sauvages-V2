@@ -16,6 +16,13 @@
       "multiple": true,
       "required": true,
       "allowedTypes": ["images", "files", "videos"]
+    },
+    "Medias": {
+      "displayName": "Medias",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.media-item",
+      "required": false
     }
   }
 }

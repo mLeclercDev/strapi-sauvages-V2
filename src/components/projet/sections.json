@@ -22,6 +22,12 @@
         "videos",
         "audios"
       ]
+    },
+    "medias": {
+      "displayName": "medias",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.media-item"
     }
   }
 }

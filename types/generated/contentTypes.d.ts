@@ -517,6 +517,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    Auteur: Schema.Attribute.String;
     Contenu: Schema.Attribute.Blocks & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1016,11 +1017,13 @@ export interface ApiProjetProjet extends Struct.CollectionTypeSchema {
     Statut: Schema.Attribute.Enumeration<['actif', 'archive', 'vus_pas_pris']> &
       Schema.Attribute.DefaultTo<'actif'>;
     thumbnail: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    thumbnailFallback: Schema.Attribute.Media<'images'>;
+    thumbnailVimeoUrl: Schema.Attribute.String;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    year: Schema.Attribute.Integer;
+    year: Schema.Attribute.String;
   };
 }
 
