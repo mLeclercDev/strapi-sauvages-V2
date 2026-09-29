@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "messages",
+  "info": {
+    "singularName": "message",
+    "pluralName": "messages",
+    "displayName": "Message"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "formulaire": {
+      "type": "enumeration",
+      "enum": [
+        "projet",
+        "candidature"
+      ],
+      "required": true
+    },
+    "reponses": {
+      "type": "json",
+      "required": true
+    },
+    "chips": {
+      "type": "json"
+    },
+    "acceptTerms": {
+      "type": "boolean",
+      "default": false
+    },
+    "acceptCommunications": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

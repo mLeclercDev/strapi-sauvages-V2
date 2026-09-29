@@ -663,8 +663,7 @@ export interface ProjetImageBlock extends Struct.ComponentSchema {
     Disposition: Schema.Attribute.Enumeration<['simple', 'double']> &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'simple'>;
-    Images: Schema.Attribute.Media<'images' | 'files' | 'videos', true> &
-      Schema.Attribute.Required;
+    Images: Schema.Attribute.Media<'images' | 'files' | 'videos', true>;
     Medias: Schema.Attribute.Component<'shared.media-item', true>;
   };
 }

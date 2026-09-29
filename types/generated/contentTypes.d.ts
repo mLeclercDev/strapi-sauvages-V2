@@ -943,6 +943,40 @@ export interface ApiManifesteManifeste extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiMessageMessage extends Struct.CollectionTypeSchema {
+  collectionName: 'messages';
+  info: {
+    displayName: 'Message';
+    pluralName: 'messages';
+    singularName: 'message';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    acceptCommunications: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
+    acceptTerms: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    chips: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    formulaire: Schema.Attribute.Enumeration<['projet', 'candidature']> &
+      Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::message.message'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    reponses: Schema.Attribute.JSON & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPageLegalePageLegale extends Struct.CollectionTypeSchema {
   collectionName: 'pages_legales';
   info: {
@@ -1590,6 +1624,7 @@ declare module '@strapi/strapi' {
       'api::header.header': ApiHeaderHeader;
       'api::homepage.homepage': ApiHomepageHomepage;
       'api::manifeste.manifeste': ApiManifesteManifeste;
+      'api::message.message': ApiMessageMessage;
       'api::page-legale.page-legale': ApiPageLegalePageLegale;
       'api::projet.projet': ApiProjetProjet;
       'api::work.work': ApiWorkWork;
