@@ -517,6 +517,7 @@ export interface HomepageHeroSection extends Struct.ComponentSchema {
       Schema.Attribute.DefaultTo<'Agence cr\u00E9ative, unie pour cr\u00E9er de l\u2019\u00E9motion depuis 20ans. De la strat\u00E9gie \u00E0 la cr\u00E9ation.'>;
     Video: Schema.Attribute.Media<'images' | 'files' | 'videos'> &
       Schema.Attribute.Required;
+    VideoVimeo: Schema.Attribute.String;
   };
 }
 

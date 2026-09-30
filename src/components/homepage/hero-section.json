@@ -19,6 +19,9 @@
         "files",
         "videos"
       ]
+    },
+    "VideoVimeo": {
+      "type": "string"
     }
   },
   "config": {}

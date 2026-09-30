@@ -10,8 +10,8 @@ interface Reponse {
   value: string;
 }
 
-const NOTIFICATION_TO = 'hello@agence-sauvages.com';
-const NOTIFICATION_FROM = 'no-reply@agence-sauvages.com';
+const NOTIFICATION_TO = process.env.CONTACT_NOTIFICATION_TO || 'hello@agence-sauvages.com';
+const NOTIFICATION_FROM = process.env.CONTACT_NOTIFICATION_FROM || 'no-reply@agence-sauvages.com';
 
 function escapeHtml(value: string): string {
   return value
