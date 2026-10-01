@@ -70,7 +70,7 @@
     },
     "autreProjet": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "manyToMany",
       "target": "api::projet.projet"
     },
     "thumbnail": {
