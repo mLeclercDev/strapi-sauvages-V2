@@ -16,6 +16,11 @@
       "default": "Intelligence Marketing Day 2025 - Une MasterClass sur l’Authenticité",
       "required": true
     },
+    "Slug": {
+      "type": "uid",
+      "targetField": "Titre",
+      "required": true
+    },
     "Resume": {
       "type": "string"
     },

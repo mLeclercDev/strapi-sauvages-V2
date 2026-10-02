@@ -533,6 +533,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     Resume: Schema.Attribute.String;
+    Slug: Schema.Attribute.UID<'Titre'> & Schema.Attribute.Required;
     Titre: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'Intelligence Marketing Day 2025 - Une MasterClass sur l\u2019Authenticit\u00E9'>;
@@ -1019,7 +1020,7 @@ export interface ApiProjetProjet extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    autreProjet: Schema.Attribute.Relation<'oneToOne', 'api::projet.projet'>;
+    autreProjet: Schema.Attribute.Relation<'manyToMany', 'api::projet.projet'>;
     chiffres_section: Schema.Attribute.Component<
       'projet.chiffres-section',
       false
