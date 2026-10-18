@@ -8,6 +8,14 @@
     "Label": {
       "type": "string"
     },
+    "StyleLabel": {
+      "type": "enumeration",
+      "enum": [
+        "defaut",
+        "h2"
+      ],
+      "default": "defaut"
+    },
     "Texte": {
       "type": "text",
       "required": true
