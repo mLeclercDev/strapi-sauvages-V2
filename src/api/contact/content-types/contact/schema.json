@@ -21,6 +21,11 @@
       "components": [
         "contact.formulaire"
       ]
+    },
+    "SEO": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
     }
   }
 }

@@ -24,6 +24,11 @@
         "global.full-width-image",
         "global.text-reveal"
       ]
+    },
+    "SEO": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
     }
   }
 }

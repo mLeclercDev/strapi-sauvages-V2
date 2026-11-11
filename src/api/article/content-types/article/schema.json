@@ -47,6 +47,11 @@
     "Contenu": {
       "type": "blocks",
       "required": true
+    },
+    "SEO": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
     }
   }
 }

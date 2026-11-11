@@ -30,6 +30,11 @@
         "global.clients-scroll",
         "global.texte-image"
       ]
+    },
+    "SEO": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
     }
   }
 }

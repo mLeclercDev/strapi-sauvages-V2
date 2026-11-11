@@ -4,7 +4,8 @@
   "info": {
     "singularName": "page-legale",
     "pluralName": "pages-legales",
-    "displayName": "Page légale"
+    "displayName": "Page",
+    "description": "Page simple : titre + texte centré (mentions légales, pages ponctuelles…)"
   },
   "options": {
     "draftAndPublish": true
@@ -21,6 +22,11 @@
     },
     "Contenu": {
       "type": "blocks"
+    },
+    "SEO": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
     }
   }
 }

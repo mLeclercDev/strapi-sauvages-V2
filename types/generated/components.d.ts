@@ -452,6 +452,8 @@ export interface GlobalTextReveal extends Struct.ComponentSchema {
   };
   attributes: {
     Label: Schema.Attribute.String;
+    StyleLabel: Schema.Attribute.Enumeration<['defaut', 'h2']> &
+      Schema.Attribute.DefaultTo<'defaut'>;
     Texte: Schema.Attribute.Text & Schema.Attribute.Required;
   };
 }
